@@ -10,15 +10,6 @@ datasource db {
 
 // Keep all your existing models (User, Account, Session, etc.) exactly as they are below this line!
 
-generator client {
-  provider = "prisma-client-js"
-}
-
-datasource db {
-  provider  = "postgresql"
-  url       = env("DATABASE_URL")
-  directUrl = env("DIRECT_URL")
-}
 
 model Account {
   id                 String  @id @default(cuid())
